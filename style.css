@@ -1,0 +1,442 @@
+/* 
+    Created on : 6 dic 2025, 12:55:37
+    Author     : elisa
+
+NOTA: 
+- Ho inserito anche le media query con i breakpoin per la visualizzazione sui diversi dispositivi,
+- I colori hanno sfumature sempre della stessa tonalità giocando solo con la trasparenza,
+- Le regole grafiche rispettano l'accessibilità
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Blocco overflow orizzontale globale */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    background: #12262f;
+    padding: 15px 0;
+}
+
+.header__logo-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Logo principale */
+.header-logo img.logo--light {
+    height: 55px;
+    width: auto;
+}
+
+/* Loghi a destra */
+.header-brands-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.header-brands-logos img {
+    height: 40px;
+    width: auto;
+}
+
+/* Media query per far scomparire i loghi */
+@media (max-width: 425px) {
+    .header-brands-logos {
+        display: none;
+    }
+}
+
+/* BODY */
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*Gestione della grafica delle ancore (più possibile simile all'header')*/
+.ancore{
+        background: #12262f;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-around;
+}
+
+.ancore > a {
+    color: white;
+    text-decoration: none;
+}
+
+.ancore > a:hover{
+    color: #20779e;
+}
+
+/*Definizione elementi principali*/
+.section {
+    width: 100%;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h1, p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.5;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+ul{
+    text-align: justify;
+    hyphens: auto;
+}
+
+/*Definizione sezioni*/
+.section-storia{
+    background-color: #0fa1e31f
+}
+
+.prodotti, .grafici{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid #0fa1e3c4;
+    background-color: white;
+}
+
+.prodotti img{
+   flex: 0 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+
+.grafici img{
+    width: 500px;
+    height: auto;
+}
+
+.section-governance{
+    background-color: #80808029;
+}
+
+.governance{
+    display: flex;
+}
+
+.governance img{
+    height: 500px; 
+    margin-top: 20px; 
+    padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+    .governance {
+        flex-direction: column;
+    }
+
+    .governance img {
+        width: 100%;
+        max-width: 600px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .governance img {
+        width: 100%;
+        max-width: 400px;
+        max-height: 300px;
+        align-self: center;
+    }
+
+    .grafici img {
+        width: 100%;
+        max-width: 400px;
+        align-self: center;
+    }
+}
+
+.materialita {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.materialita-text {
+    flex: 1;
+}
+
+.materialita-img {
+    width: 400px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .materialita {
+        flex-direction: column;
+    }
+
+    .materialita-img {
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+    }
+}
+
+.section-valori{
+    background-color: #92131354;
+}
+
+.section-valori img {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    height: auto;
+    width: 800px;
+    border: 3px solid #921313cc;
+}
+
+.section-sostenibilita{
+    background-color: #00801d30;
+}
+
+.section-sostenibilita img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+    border: 3px solid #00801dba;
+    flex-shrink: 0;
+    margin-top:40px;
+}
+.sostenibilita, .ambiente{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+}
+
+.section-sostenibilita p {
+    margin-bottom: 24px;
+    color: #222;
+}
+
+@media (max-width: 768px) {
+    .sostenibilita {
+        flex-direction: column;
+    }
+
+    .sostenibilita img {
+        width: 100%;
+        max-width: 600px;
+        align-self: center;
+    }
+}
+
+.section-ambiente{
+    background-color: #cd9b0e2e;
+}
+
+.section-ambiente img {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    height: auto;
+    width:600px;
+    border: 3px solid #cd9b0e96;
+}
+
+@media (max-width: 768px) {
+    .ambiente {
+        flex-direction: column;
+    }
+
+    .ambiente img {
+        width: 100%;
+        max-width: 600px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .ambiente img {
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .ambiente img {
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+}
+
+.section-download{
+    background-color: whitesmoke;
+}
+
+/*Sfumature tra le sezioni*/
+.sfumatura1{
+    height: 40px;
+    background: linear-gradient(to bottom, #0fa1e31f, #80808029);
+}
+
+.sfumatura2{
+    height: 40px;
+    background: linear-gradient(to bottom, #80808029, #92131354);
+}
+
+.sfumatura3{
+    height: 40px;
+    background: linear-gradient(to bottom, #92131354, #00801d30);
+}
+
+.sfumatura4{
+    height: 40px;
+    background: linear-gradient(to bottom, #00801d30, #cd9b0e2e);
+}
+
+.sfumatura5{
+    height: 40px;
+    background: linear-gradient(to bottom, #cd9b0e2e, whitesmoke);
+}
+
+/*Regole per il download*/
+.container-download {
+    padding: 3rem;
+    margin: 5rem auto;
+    border-radius: 0.8rem;
+    text-align: center;
+    border: 0.08rem solid #555; 
+    box-shadow: 0px 0px 80px 40px rgba(0, 0, 0, 0.10);
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+    background: #12262f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #12262f9e;
+}
+
+#msg {
+    margin-top: 15px;
+    color: red;
+}
+
+/*Regole per lo scroll ad inizio pagina*/
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #12262f;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollTopBtn:hover {
+    background-color: #20779e;
+}
+
+label{
+    font-size: 0.83em;
+}
+
+/* FOOTER */
+footer{
+    background: #555;
+    color: #faf8f5;
+    padding: 40px 20px;
+}
+
+.footer-main{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-links > a{
+    color: white;
+}
+
+.main-links > .sub-links > div > a{
+    color: white;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.footer .col {
+    flex: 1; 
+    min-width: 250px;
+}
+
+.footer-logo {
+    max-width: 180px;
+    height: auto;
+}
+
+.main-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer span {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
