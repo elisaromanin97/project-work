@@ -1,11 +1,9 @@
-/**
-NOTA BENE: 
-PER IL FUNZIONAMENTO DEL PROGETTO CARICARE I FILE INDEX.PHP (oppure index.html), SCRIPT.JS E STYLE.CSS 
-NELLA STESSA CARTELLA E AVVIARLI ASSIEME ALTRIMENTI NON VERRANNO RECUPERATI
-*/
-
 <?php
-
+    /**
+        NOTA BENE: 
+        PER IL FUNZIONAMENTO DEL PROGETTO CARICARE I FILE INDEX.PHP (oppure index.html), SCRIPT.JS E STYLE.CSS 
+        NELLA STESSA CARTELLA E AVVIARLI ASSIEME ALTRIMENTI NON VERRANNO RECUPERATI
+    */
     //Funzione per scaricare i bilanci in php
     //Prendo con get e verifico che effettivamente sia settato l'anno
     if (isset($_GET['anno'])) {
